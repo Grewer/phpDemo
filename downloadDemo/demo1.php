@@ -59,6 +59,7 @@ class mysql_operat{
 	function search($ip,$table){
 		$sql = "SELECT*FROM {$table} WHERE IP = {$ip} limit 1";
 		$q = $this->con->query($sql);
+		if($q==false){retuen false};
 		$this->res = $q->fetch_assoc();
 		$num = $this->res['num'];
 		if($this->res == ''){
