@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>话题广场 - 知乎</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/alert.css">
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/js/main.js"></script>
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/alert.js"></script>
+    <script src="__PUBLIC__/js/topics.js"></script>
+</head>
+
+<body class="zhi">
+    <div id="main" class="zg-wrap zu-main clearfix ">
+        <div class="zu-main-content">
+            <div class="zu-main-content-inner">
+                <div class="zm-topic-cat-page">
+                    <div class="zm-topic-cat-title">
+                        <a href="/people/Grewer/topics" class="zg-link-gray zg-right">
+                            <span>已关注 {$concernTopicNumb} 个话题</span>
+                        </a>
+                        <h2><i class="zg-icon zg-icon-topic-square"></i>话题广场</h2>
+                    </div>
+                    <ul class="zm-topic-cat-main clearfix" ref="topiclist">
+                        <foreach name="alltopic" item="vo">
+                            <li class="zm-topic-cat-item"><a @click="load({$vo.topicClassId},$event)" href="#">{$vo.topicClassName}</a></li>
+                        </foreach>
+                    </ul>
+                    <div class="zm-topic-cat-sub">
+                        <div class="zh-general-list clearfix" ref="topictext">
+                            <volist name="first" id="votwo" mod="2">
+                                <eq name="mod" value="0">
+                                <div class="item">
+                                    <div class="blk">
+                                        <a target="_blank" href="/index.php/Topic/topic/id/{$votwo.topicId}">
+                                            <img src="{$votwo.photo}" alt="{$votwo.topicName}">
+                                            <strong>{$votwo.topicName}</strong>
+                                        </a>
+                                        <p>{$votwo.topicDescribe}</p>
+                                        <a  href="javascript:;" class="follow meta-item zg-follow" @click="atten({$votwo.topicId})"  ><i class="z-icon-follow" ></i>关注</a>
+                                    </div>
+                                </div>
+                                </eq>
+                            </volist>
+
+                            <volist name="first" id="vothree" mod="2" empty="暂无数据">
+                                <eq name="mod" value="1">
+                                <div class="item even">
+                                    <div class="blk">
+                                        <a target="_blank" href="/index.php/Topic/topic/id/{$vothree.topicId}">
+                                            <img src="{$vothree.photo}" alt="{$vothree.topicName}">
+                                            <strong>{$vothree.topicName}</strong>
+                                        </a>
+                                        <p>{$vothree.topicDescribe}</p>
+                                        <a  href="javascript:;" class="follow meta-item zg-follow"  @click="atten({$vothree.topicId})" ><i class="z-icon-follow"  ></i>关注</a>
+                                    </div>
+                                </div>
+                                </eq>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 热门话题 -->
+        <div class="zu-main-sidebar" >
+            <div class="zm-side-section explore-side-section">
+                <div class="zm-side-section-inner">
+                    <div class="section-title">
+                        <h3>热门话题</h3>
+                    </div>
+                    <ul class="list hot-topics">
+                        <li class="clearfix">
+                            <a target="_blank" class="avatar-link" href="/index.php/Topic/topic/id/1" ><img src="/public/img/topic/Fitness.jpg"  class="avatar 40"></a>
+                            <div class="content">
+                                <a href="/index.php/Topic/topic/id/1" target="_blank" >健身</a>
+                                <div class="meta">
+                                    <span>101 人关注</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <a class="question_link" href="/index.php/Ques/1" target="_blank">
+                                坚持跑步到底有什么改变？
+                                </a>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <a target="_blank" class="avatar-link" href="/index.php/Topic/topic/id/1" ><img src="/public/img/topic/Fitness.jpg"  class="avatar 40"></a>
+                            <div class="content">
+                                <a href="/index.php/Topic/topic/id/1" target="_blank" >健身</a>
+                                <div class="meta">
+                                    <span>200 人关注</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <a class="question_link" href="/index.php/Ques/2" target="_blank">
+                                是什么支撑你跑完五公里？
+                                </a>
+                            </div>                        
+                        </li>
+                        <li class="clearfix">
+                            <a target="_blank" class="avatar-link" href="/index.php/Topic/topic/id/2" data-hovercard="t$b$19553101"><img src="/public/img/topic/basketball.jpg"  class="avatar 40"></a>
+                            <div class="content">
+                                <a href="/index.php/Topic/topic/id/2" target="_blank" data-hovercard="t$b$19553101">篮球</a>
+                                <div class="meta">
+                                    <span>120 人关注</span>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <a class="question_link" href="/index.php/Ques/3" target="_blank">
+2016-2017 赛季 NBA 常规赛 MVP 到底应该给谁？
+</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

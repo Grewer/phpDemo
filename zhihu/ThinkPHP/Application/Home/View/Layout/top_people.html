@@ -1,0 +1,106 @@
+<script type="text/javascript">
+        window.onscroll=function(){
+    var sl=-Math.max(document.body.scrollLeft,document.documentElement.scrollLeft);
+    document.getElementById('fixed').style.left=sl+'px';
+
+};
+</script>
+<div>
+<header id="fixed" class="Sticky AppHeader is-fixed" data-za-module="TopNavBar" style=" top: 0px;width: 100%">
+    
+    <div class="AppHeader-inner">
+        <a href="/" aria-label="知乎">
+            <!-- <svg viewBox="0 0 200 91" class="Icon Icon--logo" width="64" height="30" aria-hidden="true" style="fill: rgb(15, 136, 235); height: 30px; width: 64px;">
+                <title></title>
+                <g>
+                    <path d="M53.29 80.035l7.32.002 2.41 8.24 13.128-8.24h15.477v-67.98H53.29v67.978zm7.79-60.598h22.756v53.22h-8.73l-8.718 5.473-1.587-5.46-3.72-.012v-53.22zM46.818 43.162h-16.35c.545-8.467.687-16.12.687-22.955h15.987s.615-7.05-2.68-6.97H16.807c1.09-4.1 2.46-8.332 4.1-12.708 0 0-7.523 0-10.085 6.74-1.06 2.78-4.128 13.48-9.592 24.41 1.84-.2 7.927-.37 11.512-6.94.66-1.84.785-2.08 1.605-4.54h9.02c0 3.28-.374 20.9-.526 22.95H6.51c-3.67 0-4.863 7.38-4.863 7.38H22.14C20.765 66.11 13.385 79.24 0 89.62c6.403 1.828 12.784-.29 15.937-3.094 0 0 7.182-6.53 11.12-21.64L43.92 85.18s2.473-8.402-.388-12.496c-2.37-2.788-8.768-10.33-11.496-13.064l-4.57 3.627c1.363-4.368 2.183-8.61 2.46-12.71H49.19s-.027-7.38-2.372-7.38zm128.752-.502c6.51-8.013 14.054-18.302 14.054-18.302s-5.827-4.625-8.556-1.27c-1.874 2.548-11.51 15.063-11.51 15.063l6.012 4.51zm-46.903-18.462c-2.814-2.577-8.096.667-8.096.667s12.35 17.2 12.85 17.953l6.08-4.29s-8.02-11.752-10.83-14.33zM199.99 46.5c-6.18 0-40.908.292-40.953.292v-31.56c1.503 0 3.882-.124 7.14-.376 12.773-.753 21.914-1.25 27.427-1.504 0 0 3.817-8.496-.185-10.45-.96-.37-7.24 1.43-7.24 1.43s-51.63 5.153-72.61 5.64c.5 2.756 2.38 5.336 4.93 6.11 4.16 1.087 7.09.53 15.36.277 7.76-.5 13.65-.76 17.66-.76v31.19h-41.71s.88 6.97 7.97 7.14h33.73v22.16c0 4.364-3.498 6.87-7.65 6.6-4.4.034-8.15-.36-13.027-.566.623 1.24 1.977 4.496 6.035 6.824 3.087 1.502 5.054 2.053 8.13 2.053 9.237 0 14.27-5.4 14.027-14.16V53.93h38.235c3.026 0 2.72-7.432 2.72-7.432z" fill-rule="evenodd"></path>
+                </g>
+            </svg> -->
+            <img src="/Public/img/logo@2x.png">
+        </a>
+        <nav role="navigation" class="AppHeader-nav" style="width: auto">
+        <a class="AppHeader-navItem" href="/">首页</a>
+        <a class="AppHeader-navItem" href="/index.php/Topic">话题</a>
+        </nav>
+        <div class="SearchBar" role="search">
+            <div class="SearchBar-toolWrapper" style="vertical-align: middle;
+    
+    margin-top: 11px;">
+                <form class="SearchBar-tool" method="GET" action="{:U('/index.php/Index/search')}" id="zh-top-search-form">
+                    <div>
+                        <div class="Popover">
+                            <div class="SearchBar-input Input-wrapper Input-wrapper--grey">
+                                <input type="hidden" name="type" value="question">
+                                <input type="text" maxlength="100" value="" autocomplete="off" role="combobox" aria-expanded="false"  name="keywords" aria-autocomplete="list" aria-activedescendant="AutoComplete-87951-11234--1" id="Popover-87953-30927-toggle" aria-haspopup="true" aria-owns="Popover-87953-30927-content" class="Input" placeholder="搜索你感兴趣的内容…">
+                            </div>
+                            <!-- react-empty: 24 -->
+                        </div>
+                    </div>
+                    <button class="Button SearchBar-searchIcon Button--plain" aria-label="搜索" type="button" >
+                        <svg viewBox="0 0 16 16" class="Icon Icon--search" width="16" height="16" aria-hidden="true" style="height: 16px; width: 16px;">
+                            <title></title>
+                            <g>
+                                <path d="M12.054 10.864c.887-1.14 1.42-2.57 1.42-4.127C13.474 3.017 10.457 0 6.737 0S0 3.016 0 6.737c0 3.72 3.016 6.737 6.737 6.737 1.556 0 2.985-.533 4.127-1.42l3.103 3.104c.765.46 1.705-.37 1.19-1.19l-3.103-3.104zm-5.317.925c-2.786 0-5.053-2.267-5.053-5.053S3.95 1.684 6.737 1.684 11.79 3.95 11.79 6.737 9.522 11.79 6.736 11.79z"></path>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="SearchBar-iconDecorator"></div>
+                </form>
+            </div>
+           
+            <!-- react-empty: 33 -->
+        </div>
+        <div class="AppHeader-userInfo">
+             <div class="AppHeader-profile">
+                <div class="Popover">
+                    <button class="Button AppHeader-profileEntry Button--plain" type="button" id="Popover-88071-50055-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover-88071-50055-content"><a href="/index.php/People/index"><img class="Avatar" src="{$data.photo}"  style="width: 30px; height: 30px;"></a></button>
+                    <!-- react-empty: 368 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="PageHeader">
+        <div data-reactroot="" class="ProfileMain-header">
+            <div class="ProfileMain-avatar"><img class="Avatar Avatar--medium" src="https://pic2.zhimg.com/ea62a551fee14a24c867368307ed8195_xs.jpg" srcset="https://pic2.zhimg.com/ea62a551fee14a24c867368307ed8195_l.jpg 2x" style="width: 44px; height: 44px;"></div>
+            <ul role="tablist" class="Tabs ProfileMain-tabs">
+                <li role="tab" class="Tabs-item Tabs-item--noMeta" aria-controls="Profile-activities"><a class="Tabs-link" href="/people/zhang-666/activities">动态</a></li>
+                <li role="tab" class="Tabs-item" aria-controls="Profile-answers">
+                    <a class="Tabs-link is-active" href="/people/zhang-666/answers">
+                        <!-- react-text: 9 -->回答
+                        <!-- /react-text --><span class="Tabs-meta">11</span></a>
+                </li>
+                <li role="tab" class="Tabs-item" aria-controls="Profile-posts">
+                    <a class="Tabs-link" href="/people/zhang-666/pins">
+                        <!-- react-text: 13 -->分享
+                        <!-- /react-text --><span class="Tabs-meta">0</span></a>
+                </li>
+                <li role="tab" class="Tabs-item" aria-controls="Profile-asks">
+                    <a class="Tabs-link" href="/people/zhang-666/asks">
+                        <!-- react-text: 17 -->提问
+                        <!-- /react-text --><span class="Tabs-meta">0</span></a>
+                </li>
+                <li role="tab" class="Tabs-item" aria-controls="Profile-collections">
+                    <a class="Tabs-link" href="/people/zhang-666/collections">
+                        <!-- react-text: 21 -->收藏
+                        <!-- /react-text --><span class="Tabs-meta">7</span></a>
+                </li>
+                <li role="tab" class="Tabs-item Tabs-item--noMeta" aria-controls="Profile-following"><a class="Tabs-link" href="/people/zhang-666/following">关注</a></li>
+            </ul>
+            <div class="ProfileButtonGroup ProfileMain-buttons">
+                <button class="Button Button--blue" type="button">
+                    <!-- react-text: 27 -->编辑
+                    <!-- /react-text -->
+                    <!-- react-text: 28 -->个人
+                    <!-- /react-text -->
+                    <!-- react-text: 29 -->资料
+                    <!-- /react-text -->
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="Sticky--holder" style="position: relative; top: 0px; right: 0px; bottom: 0px; left: 0px; display: block; float: none; margin: 0px; height: 61px;"></div>
+</div>
+
+
+{__CONTENT__}

@@ -1,0 +1,2207 @@
+[ 2017-05-05T15:41:40+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002393s ]
+
+[ 2017-05-05T15:41:40+08:00 ] 127.0.0.1 /index.php/Sign/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000176s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000060s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000679s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000835s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000864s ]
+
+[ 2017-05-05T15:41:40+08:00 ] 127.0.0.1 /index.php/Home/Sign/verify_c
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000180s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/SignController.class.php 第 26 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000340s ]
+
+[ 2017-05-05T15:42:22+08:00 ] 127.0.0.1 /index.php/sign/signup_check
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: DESCRIBE user [ RunTime:0.025436s ]
+SQL: SELECT * FROM `user` WHERE ( `email` = 'wwwwww@qq.com' ) LIMIT 1   [ RunTime:0.008943s ]
+SQL: INSERT INTO `user` (`nickName`,`email`,`password`,`createTime`) VALUES ('张','wwwwww@qq.com','qwerty','2017-05-05') [ RunTime:0.007836s ]
+
+[ 2017-05-05T15:42:23+08:00 ] 127.0.0.1 /index.php/People/edit
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000427s ]
+SQL: DESCRIBE user [ RunTime:0.001496s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000391s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-05-05T15:42:42+08:00 ] 127.0.0.1 /index.php/Rcv/getpic
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+SQL: DESCRIBE user [ RunTime:0.002806s ]
+SQL: UPDATE `user` SET `photo`='/Public/img/head/201705051542424987.png' WHERE ( id=33 ) [ RunTime:0.001919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000386s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2017-05-05T15:42:48+08:00 ] 127.0.0.1 /index.php/People/edit?
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+SQL: DESCRIBE user [ RunTime:0.001743s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000267s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007143s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000401s ]
+
+[ 2017-05-05T15:42:53+08:00 ] 127.0.0.1 /index.php/People/value?auto=aaa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: DESCRIBE user [ RunTime:0.004283s ]
+SQL: SELECT `autograph` FROM `user` WHERE ( id=33 ) LIMIT 1   [ RunTime:0.000393s ]
+SQL: UPDATE `user` SET `autograph`='aaa' WHERE ( id=33 ) [ RunTime:0.001281s ]
+
+[ 2017-05-05T15:42:58+08:00 ] 127.0.0.1 /index.php/People/value?com=z&posi=x
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: DESCRIBE user [ RunTime:0.004803s ]
+SQL: SELECT `company` FROM `user` WHERE ( id=33 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SELECT `position` FROM `user` WHERE ( id=33 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: UPDATE `user` SET `company`='z' WHERE ( id=33 ) [ RunTime:0.000601s ]
+SQL: UPDATE `user` SET `position`='x' WHERE ( id=33 ) [ RunTime:0.000479s ]
+
+[ 2017-05-05T15:43:04+08:00 ] 127.0.0.1 /index.php/People/value?intro=xxxx
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001054s ]
+SQL: DESCRIBE user [ RunTime:0.003125s ]
+SQL: SELECT `introduce` FROM `user` WHERE ( id=33 ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: UPDATE `user` SET `introduce`='xxxx' WHERE ( id=33 ) [ RunTime:0.000578s ]
+
+[ 2017-05-05T15:43:09+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: DESCRIBE user [ RunTime:0.003665s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: DESCRIBE arr [ RunTime:0.002290s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000093s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000901s ]
+SQL: DESCRIBE user [ RunTime:0.002116s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001326s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.002380s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000385s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000761s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000429s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000377s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000204s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000166s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000133s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000129s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000140s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000130s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000125s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000204s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000151s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000137s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000145s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000130s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000130s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000120s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000131s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000121s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000204s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000163s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000143s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000117s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000119s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000113s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000325s ]
+
+[ 2017-05-05T15:43:14+08:00 ] 127.0.0.1 /index.php/index/grewer?start=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: DESCRIBE arr [ RunTime:0.001521s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000086s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000419s ]
+SQL: DESCRIBE user [ RunTime:0.001966s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001677s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001496s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000216s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000214s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000251s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000128s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000117s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000136s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000137s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000123s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000129s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000166s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000190s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000147s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000126s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000120s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000142s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000240s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000158s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000155s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000136s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000129s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000151s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000169s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000170s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000172s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000162s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000149s ]
+
+[ 2017-05-05T15:43:30+08:00 ] 127.0.0.1 /index.php/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: DESCRIBE user [ RunTime:0.001498s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000260s ]
+SQL: DESCRIBE topic [ RunTime:0.001899s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000105s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000356s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.002274s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000221s ]
+
+[ 2017-05-05T15:43:30+08:00 ] 127.0.0.1 /index.php/Topics/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: DESCRIBE topic [ RunTime:0.002624s ]
+SQL: DESCRIBE topicclass [ RunTime:0.001808s ]
+SQL: SELECT * FROM `topicclass`  [ RunTime:0.000246s ]
+SQL: DESCRIBE user [ RunTime:0.003135s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: DESCRIBE topic [ RunTime:0.001459s ]
+SQL: SELECT * FROM `topic` WHERE ( topicClassId = 1 )  [ RunTime:0.000302s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.001284s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `attentiontopic` WHERE ( userId = 33 ) LIMIT 1   [ RunTime:0.001037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.010291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2017-05-05T15:43:36+08:00 ] 127.0.0.1 /index.php/Topics/gettopic?id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: DESCRIBE topic [ RunTime:0.001684s ]
+SQL: DESCRIBE topic [ RunTime:0.001694s ]
+SQL: SELECT * FROM `topic` WHERE ( topicClassId = 2 )  [ RunTime:0.000262s ]
+
+[ 2017-05-05T15:43:41+08:00 ] 127.0.0.1 /index.php/Topics/attentopic?id=3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.003400s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000308s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/TopicsController.class.php 第 64 行.
+SQL: INSERT INTO `attentiontopic` (`userId`,`topicId`,`createTime`) VALUES ('33','3','2017-05-05 15:43:41') [ RunTime:0.000569s ]
+
+[ 2017-05-05T15:43:49+08:00 ] 127.0.0.1 /index.php/Topics/gettopic?id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: DESCRIBE topic [ RunTime:0.003044s ]
+SQL: DESCRIBE topic [ RunTime:0.001251s ]
+SQL: SELECT * FROM `topic` WHERE ( topicClassId = 1 )  [ RunTime:0.000253s ]
+
+[ 2017-05-05T15:43:51+08:00 ] 127.0.0.1 /index.php/Topics/attentopic?id=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.004989s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000348s ]
+SQL: INSERT INTO `attentiontopic` (`userId`,`topicId`,`createTime`) VALUES ('33','1','2017-05-05 15:43:51') [ RunTime:0.001524s ]
+
+[ 2017-05-05T15:43:53+08:00 ] 127.0.0.1 /index.php/Topics/gettopic?id=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: DESCRIBE topic [ RunTime:0.001791s ]
+SQL: DESCRIBE topic [ RunTime:0.002283s ]
+SQL: SELECT * FROM `topic` WHERE ( topicClassId = 5 )  [ RunTime:0.000244s ]
+
+[ 2017-05-05T15:43:55+08:00 ] 127.0.0.1 /index.php/Topics/attentopic?id=9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.003577s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000243s ]
+SQL: INSERT INTO `attentiontopic` (`userId`,`topicId`,`createTime`) VALUES ('33','9','2017-05-05 15:43:55') [ RunTime:0.001332s ]
+
+[ 2017-05-05T15:44:00+08:00 ] 127.0.0.1 /index.php/Topic/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000237s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000444s ]
+SQL: DESCRIBE user [ RunTime:0.003096s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: DESCRIBE topic [ RunTime:0.001647s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000088s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000250s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.001506s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000238s ]
+SQL: DESCRIBE ques [ RunTime:0.001983s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question as a [ RunTime:0.000154s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.id = b.quesId  WHERE ( a.topicId = 3 ) ORDER BY praiseNumb desc  [ RunTime:0.000603s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/1093f07c77d6e1e3d6a1d26a6fc8fc7f.php 第 203 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009231s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000532s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-05-05T15:44:00+08:00 ] 127.0.0.1 /index.php/Rcv/isthx_isatten?ansarr%5B%5D=34&quesarr%5B%5D=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: DESCRIBE arr [ RunTime:0.003906s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE thinkoppose [ RunTime:0.004506s ]
+SQL: SELECT `answerId` FROM `thinkoppose` WHERE ( userId = 33 )  [ RunTime:0.000450s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 164 行.
+SQL: DESCRIBE attentionquestion [ RunTime:0.002306s ]
+SQL: SELECT `quesId` FROM `attentionquestion` WHERE ( userId = 33 )  [ RunTime:0.000194s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 174 行.
+
+[ 2017-05-05T15:44:00+08:00 ] 127.0.0.1 /index.php/Topic/getansweruser?useridarr%5B%5D=29
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+SQL: DESCRIBE user [ RunTime:0.002664s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 29 )  [ RunTime:0.000233s ]
+
+[ 2017-05-05T15:44:02+08:00 ] 127.0.0.1 /index.php/Topic/sometopic/topicid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+SQL: DESCRIBE user [ RunTime:0.004468s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000505s ]
+SQL: DESCRIBE topic [ RunTime:0.001472s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.002909s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000292s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000115s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000355s ]
+SQL: DESCRIBE ques [ RunTime:0.001830s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question as a [ RunTime:0.000124s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.id = b.quesId  WHERE ( a.topicId = 1 ) ORDER BY praiseNumb desc  [ RunTime:0.000384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/785d12464e439d5c3279d25633a5e820.php 第 203 行.
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/785d12464e439d5c3279d25633a5e820.php 第 203 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011549s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000101s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2017-05-05T15:44:02+08:00 ] 127.0.0.1 /index.php/Rcv/isthx_isatten?ansarr%5B%5D=2&ansarr%5B%5D=5&quesarr%5B%5D=1&quesarr%5B%5D=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: DESCRIBE arr [ RunTime:0.004274s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE thinkoppose [ RunTime:0.003641s ]
+SQL: SELECT `answerId` FROM `thinkoppose` WHERE ( userId = 33 )  [ RunTime:0.002309s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 164 行.
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 164 行.
+SQL: DESCRIBE attentionquestion [ RunTime:0.002149s ]
+SQL: SELECT `quesId` FROM `attentionquestion` WHERE ( userId = 33 )  [ RunTime:0.000340s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 174 行.
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 174 行.
+
+[ 2017-05-05T15:44:02+08:00 ] 127.0.0.1 /index.php/Topic/getansweruser?useridarr%5B%5D=3&useridarr%5B%5D=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: DESCRIBE user [ RunTime:0.002711s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 3 )  [ RunTime:0.000272s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 1 )  [ RunTime:0.000246s ]
+
+[ 2017-05-05T15:44:03+08:00 ] 127.0.0.1 /index.php/Topic/sometopic/topicid/9
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: DESCRIBE user [ RunTime:0.005666s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000373s ]
+SQL: DESCRIBE topic [ RunTime:0.003144s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.001671s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000297s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000102s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000234s ]
+SQL: DESCRIBE ques [ RunTime:0.001012s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question as a [ RunTime:0.000092s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.id = b.quesId  WHERE ( a.topicId = 9 ) ORDER BY praiseNumb desc  [ RunTime:0.000301s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Model/QuesModel.class.php 第 14 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-05-05T15:44:04+08:00 ] 127.0.0.1 /index.php/Topic/sometopic/topicid/3
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: DESCRIBE user [ RunTime:0.002061s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000306s ]
+SQL: DESCRIBE topic [ RunTime:0.002098s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.001719s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000224s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000184s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000387s ]
+SQL: DESCRIBE ques [ RunTime:0.002098s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question as a [ RunTime:0.000158s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.id = b.quesId  WHERE ( a.topicId = 3 ) ORDER BY praiseNumb desc  [ RunTime:0.000391s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/785d12464e439d5c3279d25633a5e820.php 第 203 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000421s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2017-05-05T15:44:04+08:00 ] 127.0.0.1 /index.php/Topic/getansweruser?useridarr%5B%5D=29
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+SQL: DESCRIBE user [ RunTime:0.004208s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 29 )  [ RunTime:0.000409s ]
+
+[ 2017-05-05T15:44:04+08:00 ] 127.0.0.1 /index.php/Rcv/isthx_isatten?ansarr%5B%5D=34&quesarr%5B%5D=5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001039s ]
+SQL: DESCRIBE arr [ RunTime:0.002660s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE thinkoppose [ RunTime:0.002133s ]
+SQL: SELECT `answerId` FROM `thinkoppose` WHERE ( userId = 33 )  [ RunTime:0.000264s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 164 行.
+SQL: DESCRIBE attentionquestion [ RunTime:0.002145s ]
+SQL: SELECT `quesId` FROM `attentionquestion` WHERE ( userId = 33 )  [ RunTime:0.000209s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/RcvController.class.php 第 174 行.
+
+[ 2017-05-05T15:44:14+08:00 ] 127.0.0.1 /index.php/Rcv/loadispraise?answer_id=34
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000263s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.002005s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 34 ) LIMIT 1   [ RunTime:0.000275s ]
+
+[ 2017-05-05T15:44:16+08:00 ] 127.0.0.1 /index.php/Rcv/ispraise?is_praise=1&answer_id=34
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: DESCRIBE personoperat [ RunTime:0.001938s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE agreeoppose [ RunTime:0.004351s ]
+SQL: INSERT INTO `agreeoppose` (`userId`,`answerId`,`agrOpp`,`createTime`) VALUES ('33','34',1,'2017-05-05 15:44:16') [ RunTime:0.001527s ]
+SQL: DESCRIBE answer [ RunTime:0.001661s ]
+SQL: UPDATE `answer` SET `praiseNumb`=praiseNumb+1 WHERE ( id = 34 ) [ RunTime:0.001470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000372s ]
+
+[ 2017-05-05T15:44:24+08:00 ] 127.0.0.1 /index.php/Rcv/editpraise?answer_id=34&is_edit=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000772s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.001401s ]
+SQL: DESCRIBE answer [ RunTime:0.001487s ]
+SQL: UPDATE `agreeoppose` SET `agrOpp`=0 WHERE ( userId = 33 and answerId = 34 ) [ RunTime:0.000664s ]
+SQL: UPDATE `answer` SET `praiseNumb`=praiseNumb-1 WHERE ( id = 34 ) [ RunTime:0.000577s ]
+SQL: UPDATE `answer` SET `againstNumb`=againstNumb+1 WHERE ( id = 34 ) [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2017-05-05T15:44:26+08:00 ] 127.0.0.1 /index.php/Rcv/editpraise?answer_id=34&is_edit=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.003209s ]
+SQL: DESCRIBE answer [ RunTime:0.001437s ]
+SQL: UPDATE `agreeoppose` SET `agrOpp`=1 WHERE ( userId = 33 and answerId = 34 ) [ RunTime:0.000542s ]
+SQL: UPDATE `answer` SET `praiseNumb`=praiseNumb+1 WHERE ( id = 34 ) [ RunTime:0.000758s ]
+SQL: UPDATE `answer` SET `againstNumb`=againstNumb-1 WHERE ( id = 34 ) [ RunTime:0.001736s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000389s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-05-05T15:44:41+08:00 ] 127.0.0.1 /index.php/Rcv/thank?answerid=34&isthank=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000505s ]
+SQL: DESCRIBE personoperat [ RunTime:0.002228s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE thinkoppose [ RunTime:0.001326s ]
+SQL: INSERT INTO `thinkoppose` (`userId`,`answerId`,`createTime`) VALUES ('33','34','2017-05-05 15:44:41') [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-05-05T15:45:13+08:00 ] 127.0.0.1 /index.php/Rcv/attenques?quesid=5&isatten=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: DESCRIBE atten [ RunTime:0.002109s ]
+ERR: 1146:Table 'test.atten' doesn't exist
+ [ SQL语句 ] : DESCRIBE atten
+SQL: DESCRIBE attentionquestion [ RunTime:0.002984s ]
+SQL: INSERT INTO `attentionquestion` (`userId`,`quesId`,`createTime`) VALUES ('33','5','2017-05-05 15:45:13') [ RunTime:0.000636s ]
+SQL: DESCRIBE question [ RunTime:0.001610s ]
+SQL: UPDATE `question` SET `attentionNumb`=attentionNumb+1 WHERE ( id = 5 ) [ RunTime:0.000652s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2017-05-05T15:45:14+08:00 ] 127.0.0.1 /index.php/Rcv/getcomment?answerid=34
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: DESCRIBE personoperat [ RunTime:0.001527s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE comment as a [ RunTime:0.000114s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE comment as a
+SQL: SELECT * FROM comment as a INNER JOIN User as b on a.commentatorId = b.id  WHERE ( answerId = 34 )  [ RunTime:0.000476s ]
+
+[ 2017-05-05T15:45:24+08:00 ] 127.0.0.1 /index.php/Rcv/addcomment?answerid=34&content=qw
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: DESCRIBE personoperat [ RunTime:0.004696s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE comment [ RunTime:0.004195s ]
+SQL: INSERT INTO `comment` (`commentatorId`,`answerId`,`commentContent`,`comcreateTime`) VALUES ('33','34','qw','2017-05-05 15:45:24') [ RunTime:0.001575s ]
+SQL: DESCRIBE answer [ RunTime:0.001529s ]
+SQL: UPDATE `answer` SET `commentNumb`=commentNumb+1 WHERE ( id = 34 ) [ RunTime:0.000437s ]
+SQL: DESCRIBE user [ RunTime:0.001229s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000224s ]
+
+[ 2017-05-05T15:45:36+08:00 ] 127.0.0.1 /index.php/Ques/5
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+SQL: DESCRIBE user [ RunTime:0.002174s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: DESCRIBE question [ RunTime:0.002101s ]
+SQL: SELECT * FROM `question` WHERE ( `id` = 5 ) LIMIT 1   [ RunTime:0.000237s ]
+SQL: DESCRIBE topic [ RunTime:0.001560s ]
+SQL: SELECT * FROM `topic` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: DESCRIBE quescomment [ RunTime:0.002267s ]
+SQL: SELECT * FROM `quescomment` WHERE ( quesId = 5 )  [ RunTime:0.002025s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001657s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( quesId = 5 AND userId = 33 )  [ RunTime:0.000248s ]
+SQL: DESCRIBE answer [ RunTime:0.002122s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 and quesId = 5 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `answer` WHERE ( quesId = 5 )  [ RunTime:0.000222s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.002145s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001193s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000341s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 34 ) LIMIT 1   [ RunTime:0.000194s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 ) LIMIT 1   [ RunTime:0.000176s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009018s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000389s ]
+
+[ 2017-05-05T15:45:43+08:00 ] 127.0.0.1 /index.php/Topic/sometopic/topicid/1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000937s ]
+SQL: DESCRIBE user [ RunTime:0.002688s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: DESCRIBE topic [ RunTime:0.001212s ]
+SQL: DESCRIBE attentiontopic [ RunTime:0.001539s ]
+SQL: SELECT * FROM `attentiontopic` WHERE ( userId = 33 )  [ RunTime:0.000232s ]
+SQL: DESCRIBE topic as a [ RunTime:0.000095s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE topic as a
+SQL: SELECT * FROM topic as a INNER JOIN AttentionTopic as b on a.topicId = b.topicId  WHERE ( userId = 33 )  [ RunTime:0.000244s ]
+SQL: DESCRIBE ques [ RunTime:0.002547s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question as a [ RunTime:0.000179s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.id = b.quesId  WHERE ( a.topicId = 1 ) ORDER BY praiseNumb desc  [ RunTime:0.000740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/785d12464e439d5c3279d25633a5e820.php 第 203 行.
+NOTIC: [8] Undefined index: createTime /Users/apple/Sites/tp/ThinkPHP/Application/Runtime/Cache/Home/785d12464e439d5c3279d25633a5e820.php 第 203 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000086s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2017-05-05T15:45:43+08:00 ] 127.0.0.1 /index.php/Rcv/isthx_isatten?ansarr%5B%5D=2&ansarr%5B%5D=5&quesarr%5B%5D=1&quesarr%5B%5D=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000555s ]
+SQL: DESCRIBE arr [ RunTime:0.003450s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE thinkoppose [ RunTime:0.002397s ]
+SQL: SELECT `answerId` FROM `thinkoppose` WHERE ( userId = 33 )  [ RunTime:0.000209s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001480s ]
+SQL: SELECT `quesId` FROM `attentionquestion` WHERE ( userId = 33 )  [ RunTime:0.000324s ]
+
+[ 2017-05-05T15:45:43+08:00 ] 127.0.0.1 /index.php/Topic/getansweruser?useridarr%5B%5D=3&useridarr%5B%5D=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: DESCRIBE user [ RunTime:0.001973s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 3 )  [ RunTime:0.000222s ]
+SQL: SELECT `id`,`nickName`,`autograph` FROM `user` WHERE ( id = 1 )  [ RunTime:0.000170s ]
+
+[ 2017-05-05T15:45:48+08:00 ] 127.0.0.1 /index.php/Rcv/loadispraise?answer_id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.002332s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 2 ) LIMIT 1   [ RunTime:0.000236s ]
+
+[ 2017-05-05T15:45:54+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: DESCRIBE user [ RunTime:0.001723s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: DESCRIBE arr [ RunTime:0.000962s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000101s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000574s ]
+SQL: DESCRIBE user [ RunTime:0.002048s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.002873s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.002052s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000373s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000206s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000244s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000151s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000137s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000142s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000129s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000122s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000129s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000167s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000149s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000133s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000158s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000153s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000159s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000148s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000146s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000134s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000124s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000146s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000110s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000112s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000110s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000122s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000115s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000112s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2017-05-05T15:45:56+08:00 ] 127.0.0.1 /index.php/index/grewer?start=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: DESCRIBE arr [ RunTime:0.003622s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000201s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000404s ]
+SQL: DESCRIBE user [ RunTime:0.001472s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001493s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001833s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000284s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000175s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000186s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000318s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000269s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000284s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000144s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000562s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000351s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000180s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000157s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000140s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000167s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000152s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000139s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000132s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000207s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000185s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000146s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000122s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000115s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000165s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000120s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000132s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000380s ]
+
+[ 2017-05-05T15:45:58+08:00 ] 127.0.0.1 /index.php/Rcv/loadispraise?answer_id=35
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.002781s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 35 ) LIMIT 1   [ RunTime:0.000290s ]
+
+[ 2017-05-05T15:46:01+08:00 ] 127.0.0.1 /index.php/Ques/2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: DESCRIBE user [ RunTime:0.001824s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000377s ]
+SQL: DESCRIBE question [ RunTime:0.003507s ]
+SQL: SELECT * FROM `question` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000539s ]
+SQL: DESCRIBE topic [ RunTime:0.002755s ]
+SQL: SELECT * FROM `topic` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: DESCRIBE quescomment [ RunTime:0.001333s ]
+SQL: SELECT * FROM `quescomment` WHERE ( quesId = 2 )  [ RunTime:0.000232s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001335s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( quesId = 2 AND userId = 33 )  [ RunTime:0.000238s ]
+SQL: DESCRIBE answer [ RunTime:0.001715s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 and quesId = 2 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SELECT * FROM `answer` WHERE ( quesId = 2 )  [ RunTime:0.000258s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.001397s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001126s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 3 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 ) LIMIT 1   [ RunTime:0.000170s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 5 ) LIMIT 1   [ RunTime:0.000166s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 ) LIMIT 1   [ RunTime:0.000195s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000176s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 32 ) LIMIT 1   [ RunTime:0.000152s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.001975s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 35 ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 ) LIMIT 1   [ RunTime:0.000312s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 38 ) LIMIT 1   [ RunTime:0.000329s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 ) LIMIT 1   [ RunTime:0.000200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006572s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000356s ]
+
+[ 2017-05-05T15:46:06+08:00 ] 127.0.0.1 /index.php/Rcv/attenques?quesid=2&isatten=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000347s ]
+SQL: DESCRIBE atten [ RunTime:0.002679s ]
+ERR: 1146:Table 'test.atten' doesn't exist
+ [ SQL语句 ] : DESCRIBE atten
+SQL: DESCRIBE attentionquestion [ RunTime:0.001599s ]
+SQL: INSERT INTO `attentionquestion` (`userId`,`quesId`,`createTime`) VALUES ('33','2','2017-05-05 15:46:06') [ RunTime:0.001997s ]
+SQL: DESCRIBE question [ RunTime:0.001762s ]
+SQL: UPDATE `question` SET `attentionNumb`=attentionNumb+1 WHERE ( id = 2 ) [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000338s ]
+
+[ 2017-05-05T15:46:12+08:00 ] 127.0.0.1 /index.php/Rcv/getquescom?quesid=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: DESCRIBE quescomment as a [ RunTime:0.000181s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE quescomment as a
+SQL: SELECT * FROM quescomment as a INNER JOIN User as b on a.commentatorId = b.id  WHERE ( a.quesId = 2 )  [ RunTime:0.000561s ]
+
+[ 2017-05-05T15:46:18+08:00 ] 127.0.0.1 /index.php/Rcv/addquescom?quesid=2&content=aaa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: DESCRIBE quescomment [ RunTime:0.003992s ]
+SQL: INSERT INTO `quescomment` (`quesId`,`commentatorId`,`commentContent`,`qccreateTime`) VALUES ('2','33','aaa','2017-05-05 15:46:18') [ RunTime:0.001148s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000347s ]
+
+[ 2017-05-05T15:46:37+08:00 ] 127.0.0.1 /index.php/Rcv/rcvanswer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: DESCRIBE personoperat [ RunTime:0.001700s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE answer [ RunTime:0.001431s ]
+SQL: INSERT INTO `answer` (`userId`,`quesId`,`answerContent`,`anonymity`,`photo`,`anscreateTime`) VALUES ('33','2','','1','/Public/img/answer/201705051546375127.png','2017-05-05 15:46:37') [ RunTime:0.000483s ]
+SQL: DESCRIBE question [ RunTime:0.003724s ]
+SQL: UPDATE `question` SET `answerNumb`=answerNumb+1 WHERE ( id = 2 ) [ RunTime:0.000753s ]
+
+[ 2017-05-05T15:46:45+08:00 ] 127.0.0.1 /index.php/Rcv/ispraise?is_praise=1&answer_id=33
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000608s ]
+SQL: DESCRIBE personoperat [ RunTime:0.003546s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE agreeoppose [ RunTime:0.001429s ]
+SQL: INSERT INTO `agreeoppose` (`userId`,`answerId`,`agrOpp`,`createTime`) VALUES ('33','33',1,'2017-05-05 15:46:45') [ RunTime:0.001783s ]
+SQL: DESCRIBE answer [ RunTime:0.001797s ]
+SQL: UPDATE `answer` SET `praiseNumb`=praiseNumb+1 WHERE ( id = 33 ) [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000511s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-05-05T15:47:39+08:00 ] 127.0.0.1 /index.php/Rcv/ispraise?is_praise=1&answer_id=38
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: DESCRIBE personoperat [ RunTime:0.005881s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE agreeoppose [ RunTime:0.001762s ]
+SQL: INSERT INTO `agreeoppose` (`userId`,`answerId`,`agrOpp`,`createTime`) VALUES ('33','38',1,'2017-05-05 15:47:39') [ RunTime:0.000624s ]
+SQL: DESCRIBE answer [ RunTime:0.002017s ]
+SQL: UPDATE `answer` SET `praiseNumb`=praiseNumb+1 WHERE ( id = 38 ) [ RunTime:0.000936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000611s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000657s ]
+
+[ 2017-05-05T15:47:40+08:00 ] 127.0.0.1 /index.php/Rcv/getcomment?answerid=38
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: DESCRIBE personoperat [ RunTime:0.001077s ]
+ERR: 1146:Table 'test.personoperat' doesn't exist
+ [ SQL语句 ] : DESCRIBE personoperat
+SQL: DESCRIBE comment as a [ RunTime:0.000097s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE comment as a
+SQL: SELECT * FROM comment as a INNER JOIN User as b on a.commentatorId = b.id  WHERE ( answerId = 38 )  [ RunTime:0.000351s ]
+
+[ 2017-05-05T15:47:49+08:00 ] 127.0.0.1 /index.php/People/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: DESCRIBE user [ RunTime:0.002464s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: DESCRIBE people [ RunTime:0.001072s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000093s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.001013s ]
+SQL: DESCRIBE answer [ RunTime:0.001402s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000255s ]
+SQL: DESCRIBE question [ RunTime:0.001105s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000200s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000071s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000076s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000182s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000113s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2017-05-05T15:51:05+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: DESCRIBE user [ RunTime:0.002486s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: DESCRIBE arr [ RunTime:0.001331s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000211s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000791s ]
+SQL: DESCRIBE user [ RunTime:0.002787s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001964s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001807s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000163s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000140s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000127s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000134s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000125s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000120s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000117s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000164s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000126s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000117s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000125s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000123s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000123s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000111s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000112s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000168s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000157s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000147s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000128s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000127s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004340s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000108s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000527s ]
+
+[ 2017-05-05T15:51:25+08:00 ] 127.0.0.1 /index.php/Rcv/addques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: DESCRIBE ques [ RunTime:0.001856s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question [ RunTime:0.001530s ]
+SQL: INSERT INTO `question` (`topicId`,`quesName`,`quesDescribe`,`Anonymity`,`quescreateTime`) VALUES ('3','wode','hh',0,'2017-05-05 15:51:25') [ RunTime:0.000520s ]
+SQL: UPDATE `question` SET `quesId`=34 WHERE ( id = 34 ) [ RunTime:0.000620s ]
+
+[ 2017-05-05T15:51:26+08:00 ] 127.0.0.1 /index.php/Ques/34
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: DESCRIBE user [ RunTime:0.001955s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000470s ]
+SQL: DESCRIBE question [ RunTime:0.002528s ]
+SQL: SELECT * FROM `question` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: DESCRIBE topic [ RunTime:0.001987s ]
+SQL: SELECT * FROM `topic` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: DESCRIBE quescomment [ RunTime:0.001733s ]
+SQL: SELECT * FROM `quescomment` WHERE ( quesId = 34 )  [ RunTime:0.000280s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001780s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( quesId = 34 AND userId = 33 )  [ RunTime:0.000274s ]
+SQL: DESCRIBE answer [ RunTime:0.001595s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 and quesId = 34 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SELECT * FROM `answer` WHERE ( quesId = 34 )  [ RunTime:0.000198s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.001891s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.002054s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/QuesController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000300s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2017-05-05T15:51:31+08:00 ] 127.0.0.1 /index.php/People/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: DESCRIBE user [ RunTime:0.004107s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000452s ]
+SQL: DESCRIBE people [ RunTime:0.003241s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000130s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000386s ]
+SQL: DESCRIBE answer [ RunTime:0.001645s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000275s ]
+SQL: DESCRIBE question [ RunTime:0.001738s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000221s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000180s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000178s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000196s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000084s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000343s ]
+
+[ 2017-05-05T15:51:33+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000242s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: DESCRIBE user [ RunTime:0.002431s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000281s ]
+SQL: DESCRIBE people [ RunTime:0.002470s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.002760s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000370s ]
+SQL: DESCRIBE answer [ RunTime:0.001160s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000334s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000322s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000112s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000138s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000257s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000105s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000197s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000303s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-05-05T15:51:36+08:00 ] 127.0.0.1 /index.php/People
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: DESCRIBE user [ RunTime:0.001784s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: DESCRIBE people [ RunTime:0.001286s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000103s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000288s ]
+SQL: DESCRIBE answer [ RunTime:0.001166s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000344s ]
+SQL: DESCRIBE question [ RunTime:0.002333s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000296s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000136s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000125s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000266s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000100s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000208s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000073s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000327s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000366s ]
+
+[ 2017-05-05T15:51:38+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+SQL: DESCRIBE user [ RunTime:0.001808s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: DESCRIBE people [ RunTime:0.001129s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.001913s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000607s ]
+SQL: DESCRIBE answer [ RunTime:0.002273s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000266s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000267s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000101s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000083s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000173s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000101s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000268s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000377s ]
+
+[ 2017-05-05T15:51:39+08:00 ] 127.0.0.1 /index.php/People
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000207s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+SQL: DESCRIBE user [ RunTime:0.002322s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: DESCRIBE people [ RunTime:0.000914s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000096s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000245s ]
+SQL: DESCRIBE answer [ RunTime:0.001267s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000265s ]
+SQL: DESCRIBE question [ RunTime:0.002077s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000214s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000082s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000108s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000177s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000091s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000194s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2017-05-05T15:51:45+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+SQL: DESCRIBE user [ RunTime:0.001854s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000339s ]
+SQL: DESCRIBE people [ RunTime:0.001001s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.001847s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000246s ]
+SQL: DESCRIBE answer [ RunTime:0.001404s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000293s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000266s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000112s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000127s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000097s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000309s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000324s ]
+
+[ 2017-05-05T15:53:01+08:00 ] 127.0.0.1 /index.php/Index/search?type=question&keywords=we
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: DESCRIBE question [ RunTime:0.004005s ]
+SQL: SELECT * FROM `question` WHERE ( quesName like '%we%' )  [ RunTime:0.000895s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 63 行.
+SQL: DESCRIBE user [ RunTime:0.003311s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000271s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000302s ]
+
+[ 2017-05-05T15:53:03+08:00 ] 127.0.0.1 /index.php/Index/search?type=answer&q=we
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: DESCRIBE answer as a [ RunTime:0.000170s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE answer as a
+SQL: SELECT * FROM answer as a INNER JOIN Question as b on a.quesId = b.id  WHERE ( a.answerContent like '%we%' )  [ RunTime:0.001112s ]
+SQL: DESCRIBE user [ RunTime:0.002656s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000163s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000199s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000181s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.003449s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003471s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000076s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000489s ]
+
+[ 2017-05-05T15:53:07+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: DESCRIBE user [ RunTime:0.006363s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: DESCRIBE arr [ RunTime:0.004157s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000200s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000415s ]
+SQL: DESCRIBE user [ RunTime:0.001711s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001168s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001217s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000274s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000181s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000139s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000129s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000236s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000141s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000222s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000146s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000143s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000153s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000195s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000245s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000208s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000213s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000136s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000126s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000138s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000207s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000161s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000171s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000152s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2017-05-05T15:54:52+08:00 ] 127.0.0.1 /index.php/Rcv/loadispraise?answer_id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.002098s ]
+SQL: SELECT * FROM `agreeoppose` WHERE ( userId = 33 and answerId = 4 ) LIMIT 1   [ RunTime:0.000605s ]
+
+[ 2017-05-05T16:21:21+08:00 ] 127.0.0.1 /index.php/People/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: DESCRIBE user [ RunTime:0.003084s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000504s ]
+SQL: DESCRIBE people [ RunTime:0.001116s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000125s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000362s ]
+SQL: DESCRIBE answer [ RunTime:0.001281s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000249s ]
+SQL: DESCRIBE question [ RunTime:0.001547s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000354s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000093s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000176s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000280s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000114s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001044s ]
+
+[ 2017-05-05T16:21:23+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: DESCRIBE user [ RunTime:0.002577s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000356s ]
+SQL: DESCRIBE people [ RunTime:0.001865s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.002126s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000325s ]
+SQL: DESCRIBE answer [ RunTime:0.002025s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000369s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000224s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000094s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000114s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000082s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000184s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-05-05T16:22:31+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000830s ]
+SQL: DESCRIBE user [ RunTime:0.001655s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000267s ]
+SQL: DESCRIBE arr [ RunTime:0.001831s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000144s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000571s ]
+SQL: DESCRIBE user [ RunTime:0.002206s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001488s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.002810s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000235s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000161s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000164s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000197s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000259s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000157s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000144s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000139s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000153s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000151s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000173s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000127s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000121s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000131s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000123s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000120s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000132s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000127s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000113s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000127s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000115s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000116s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000124s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000116s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000125s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000114s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000115s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000159s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000151s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000294s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000318s ]
+
+[ 2017-05-05T16:25:44+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: DESCRIBE user [ RunTime:0.002425s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: DESCRIBE arr [ RunTime:0.000940s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000210s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000413s ]
+SQL: DESCRIBE user [ RunTime:0.001908s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001266s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001179s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000215s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000153s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000148s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000159s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000144s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000249s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000226s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000169s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000148s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000183s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000169s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000164s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000178s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000180s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000152s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000141s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000134s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000145s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000144s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000134s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000168s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000133s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000133s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000130s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000131s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000130s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000249s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000438s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004280s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000075s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000341s ]
+
+[ 2017-05-05T16:25:45+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000218s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: DESCRIBE user [ RunTime:0.003663s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: DESCRIBE arr [ RunTime:0.005084s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000140s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000647s ]
+SQL: DESCRIBE user [ RunTime:0.007521s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.002073s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.003021s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000493s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000475s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000418s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000580s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000226s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000217s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000202s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000287s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000490s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.001736s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000928s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000484s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000909s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000266s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000194s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000194s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000191s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000147s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000165s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000155s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000150s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000156s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000137s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000161s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000381s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000229s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000153s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000247s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000215s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004715s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2017-05-05T16:25:46+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: DESCRIBE user [ RunTime:0.003617s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000539s ]
+SQL: DESCRIBE arr [ RunTime:0.001599s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000120s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000384s ]
+SQL: DESCRIBE user [ RunTime:0.001255s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001405s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001324s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000154s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000140s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000122s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000145s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000132s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000197s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000149s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000128s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000150s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000140s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000135s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000200s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000139s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000156s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000182s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000143s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000149s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000128s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000149s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000125s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000134s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000137s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000143s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000145s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000207s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000144s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000140s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000125s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004138s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000362s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-05-05T16:26:10+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000189s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: DESCRIBE user [ RunTime:0.002367s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: DESCRIBE arr [ RunTime:0.001705s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000125s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000725s ]
+SQL: DESCRIBE user [ RunTime:0.004530s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.002537s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.002212s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000176s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000154s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000156s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000194s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000172s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000217s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000176s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000219s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000166s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000152s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000145s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000128s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000139s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000135s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000148s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000151s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000144s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000136s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000162s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000209s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000135s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000211s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000148s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000193s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000205s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000176s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000169s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000221s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000230s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000516s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000486s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000111s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000389s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-05-05T16:26:11+08:00 ] 127.0.0.1 /index.php/People/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: DESCRIBE user [ RunTime:0.005603s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000591s ]
+SQL: DESCRIBE people [ RunTime:0.001740s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000380s ]
+SQL: DESCRIBE answer [ RunTime:0.001262s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000324s ]
+SQL: DESCRIBE question [ RunTime:0.002418s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000321s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000122s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000113s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000227s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000100s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000212s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2017-05-05T16:26:12+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+SQL: DESCRIBE user [ RunTime:0.002048s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000470s ]
+SQL: DESCRIBE people [ RunTime:0.004074s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.003493s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000359s ]
+SQL: DESCRIBE answer [ RunTime:0.001548s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000305s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000287s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000118s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000289s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000130s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000331s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000126s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000291s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000113s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-05-05T16:26:14+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: DESCRIBE user [ RunTime:0.001690s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000287s ]
+SQL: DESCRIBE people [ RunTime:0.001497s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.002258s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000330s ]
+SQL: DESCRIBE answer [ RunTime:0.004640s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000305s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000215s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000094s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000233s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000087s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000175s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000088s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000173s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000464s ]
+
+[ 2017-05-05T16:26:15+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+SQL: DESCRIBE user [ RunTime:0.002904s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000278s ]
+SQL: DESCRIBE arr [ RunTime:0.001336s ]
+ERR: 1146:Table 'test.arr' doesn't exist
+ [ SQL语句 ] : DESCRIBE arr
+SQL: DESCRIBE question as a [ RunTime:0.000103s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on a.quesId = b.quesId   [ RunTime:0.000573s ]
+SQL: DESCRIBE user [ RunTime:0.003668s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.002496s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001606s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000218s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 2 )  [ RunTime:0.000213s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000203s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 1 )  [ RunTime:0.000183s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 29 )  [ RunTime:0.000180s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000186s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 3 )  [ RunTime:0.000189s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000224s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000183s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 5 )  [ RunTime:0.000169s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000188s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 32 )  [ RunTime:0.000176s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000189s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000198s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 35 )  [ RunTime:0.000175s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000187s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 38 )  [ RunTime:0.000170s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 2 )  [ RunTime:0.000199s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 39 )  [ RunTime:0.000177s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000192s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000296s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 4 )  [ RunTime:0.000179s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 2 ) LIMIT 1   [ RunTime:0.000209s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 3 )  [ RunTime:0.000188s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 37 )  [ RunTime:0.000177s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000193s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 4 )  [ RunTime:0.000179s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 33 )  [ RunTime:0.000171s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 29 ) LIMIT 1   [ RunTime:0.000200s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( userId = 33 and quesId = 5 )  [ RunTime:0.000188s ]
+SQL: SELECT * FROM `thinkoppose` WHERE ( userId = 33 and answerId = 34 )  [ RunTime:0.000218s ]
+NOTIC: [8] Undefined variable: start /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/IndexController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005430s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005461s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000373s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-05-05T16:26:21+08:00 ] 127.0.0.1 /index.php/Rcv/addques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+SQL: DESCRIBE ques [ RunTime:0.001644s ]
+ERR: 1146:Table 'test.ques' doesn't exist
+ [ SQL语句 ] : DESCRIBE ques
+SQL: DESCRIBE question [ RunTime:0.001541s ]
+SQL: INSERT INTO `question` (`topicId`,`quesName`,`quesDescribe`,`Uid`,`Anonymity`,`quescreateTime`) VALUES ('3','xinhuida','',33,0,'2017-05-05 16:26:21') [ RunTime:0.000589s ]
+SQL: UPDATE `question` SET `quesId`=35 WHERE ( id = 35 ) [ RunTime:0.000567s ]
+
+[ 2017-05-05T16:26:23+08:00 ] 127.0.0.1 /index.php/Ques/35
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000400s ]
+SQL: DESCRIBE user [ RunTime:0.002385s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000362s ]
+SQL: DESCRIBE question [ RunTime:0.002090s ]
+SQL: SELECT * FROM `question` WHERE ( `id` = 35 ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: DESCRIBE topic [ RunTime:0.001324s ]
+SQL: SELECT * FROM `topic` WHERE ( `id` = 3 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: DESCRIBE quescomment [ RunTime:0.001170s ]
+SQL: SELECT * FROM `quescomment` WHERE ( quesId = 35 )  [ RunTime:0.000199s ]
+SQL: DESCRIBE attentionquestion [ RunTime:0.001446s ]
+SQL: SELECT * FROM `attentionquestion` WHERE ( quesId = 35 AND userId = 33 )  [ RunTime:0.000244s ]
+SQL: DESCRIBE answer [ RunTime:0.001871s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 and quesId = 35 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT * FROM `answer` WHERE ( quesId = 35 )  [ RunTime:0.000178s ]
+SQL: DESCRIBE agreeoppose [ RunTime:0.001507s ]
+SQL: DESCRIBE thinkoppose [ RunTime:0.001446s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/apple/Sites/tp/ThinkPHP/Application/Home/Controller/QuesController.class.php 第 43 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000304s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2017-05-05T16:26:26+08:00 ] 127.0.0.1 /index.php/People/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: DESCRIBE user [ RunTime:0.001925s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000391s ]
+SQL: DESCRIBE people [ RunTime:0.002233s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question as a [ RunTime:0.000171s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE question as a
+SQL: SELECT * FROM question as a INNER JOIN Answer as b on b.quesId = a.id  WHERE ( userId = 33 )  [ RunTime:0.000387s ]
+SQL: DESCRIBE answer [ RunTime:0.001590s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000231s ]
+SQL: DESCRIBE question [ RunTime:0.001529s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000290s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000115s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000254s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000175s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000255s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005338s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-05-05T16:26:28+08:00 ] 127.0.0.1 /index.php/People/index/type/ques
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+SQL: DESCRIBE user [ RunTime:0.003579s ]
+SQL: SELECT * FROM `user` WHERE ( `id` = 33 ) LIMIT 1   [ RunTime:0.000277s ]
+SQL: DESCRIBE people [ RunTime:0.001442s ]
+ERR: 1146:Table 'test.people' doesn't exist
+ [ SQL语句 ] : DESCRIBE people
+SQL: DESCRIBE question [ RunTime:0.002629s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000370s ]
+SQL: DESCRIBE answer [ RunTime:0.002834s ]
+SQL: SELECT * FROM `answer` WHERE ( userId = 33 )  [ RunTime:0.000264s ]
+SQL: SELECT * FROM `question` WHERE ( Uid = 33 )  [ RunTime:0.000289s ]
+SQL: DESCRIBE answer as b [ RunTime:0.000094s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as b' at line 1
+ [ SQL语句 ] : DESCRIBE answer as b
+SQL: SELECT COUNT(*) AS tp_count FROM answer as b INNER JOIN Agreeoppose as a on a.answerId = b.id  WHERE ( b.userId = 33 and a.agrOpp = 1 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: DESCRIBE thinkoppose as a [ RunTime:0.000085s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE thinkoppose as a
+SQL: SELECT COUNT(*) AS tp_count FROM thinkoppose as a INNER JOIN Answer as b on a.answerId = b.id  WHERE ( b.userId = 33 ) LIMIT 1   [ RunTime:0.000188s ]
+SQL: DESCRIBE attentiontopic as a [ RunTime:0.000143s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : DESCRIBE attentiontopic as a
+SQL: SELECT COUNT(*) AS tp_count FROM attentiontopic as a INNER JOIN Topic as b on a.topicId = b.topicid  WHERE ( userId= 33 ) LIMIT 1   [ RunTime:0.000203s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005400s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000079s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+

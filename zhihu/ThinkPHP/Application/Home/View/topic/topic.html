@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>话题详情 - 知乎</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/js/main.js"></script>
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/topicdetails.js"></script>
+</head>
+
+<body class="zhi topic-feed-page">
+    <div id="main" class="zg-wrap zu-main clearfix">
+        <div class="zu-main-content">
+            <div class="zu-main-content-inner">
+                <div>
+                    <div class="topic-avatar">
+                        <div>
+                            <a class="zm-entry-head-avatar-link" href="" id="zh-avartar-edit-form">
+                                <img alt="{$topicdata.topicName}" src="{$topicdata.photo}" class="zm-avatar-editor-preview"></a>
+                            <meta itemprop="image" content="">
+                        </div>
+                    </div>
+                    <div class="topic-info">
+                        <div class="topic-name zm-editable-status-normal" id="zh-topic-title">
+                            <h1 class="zm-editable-content" data-disabled="1">{$topicdata.topicName}</h1>
+                            
+                        </div>
+                        <a href="#" class="meta-item share-button zg-right goog-inline-block goog-menu-button" name="share" role="button" aria-expanded="false" tabindex="0" aria-haspopup="true" style="user-select: none;">
+                            <div class="goog-inline-block goog-menu-button-outer-box">
+                                <div class="goog-inline-block goog-menu-button-inner-box">
+                                    <div class="goog-inline-block goog-menu-button-caption"><i class="z-icon-share"></i>分享</div>
+                                    <div class="goog-inline-block goog-menu-button-dropdown">&nbsp;</div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="zm-topic-topbar">
+                            <div class="zm-topic-topbar-nav clearfix">
+                                <ul class="zm-topic-topbar-nav-list zg-left clearfix">
+                                    <li class="zm-topic-topbar-nav-list-item current">
+                                        <span>动态</span>
+                                    </li>
+                                    <!-- <li class="zm-topic-topbar-nav-list-item">
+                                        <a class="zg-link-litblue-normal" href="/topic/19550517/top-answers">精华</a>
+                                    </li>
+                                    <li class="zm-topic-topbar-nav-list-item">
+                                        <a class="zg-link-litblue-normal" href="/topic/19550517/unanswered">等待回答</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed-switcher">
+                        <span class="current">热门排序</span> | <a href="/topic/19550517/newest">时间排序</a>
+                    </div>
+                    <!-- 问题列 S -->
+<div class="zm-topic-list-container">
+                    <div class="zu-top-feed-list" id="zh-topic-feed-list">
+                        <div class="zh-general-list clearfix" style="display: block;" ref="ques_user">
+                            
+
+
+                            <volist name="queslist" id="vo" >
+                                <div class="feed-item feed-item-hook folding" user-id="{$vo.userId}" answer-id="{$vo.id}" is-tog="1" @mouseenter="show('',$event)" @mouseleave="hide('',$event)" ques-id="{$vo.quesId}" >
+                                    <div class="feed-main"  >
+                                        <div class="feed-content">
+                                            <h2><a class="question_link" href="/index.php/Ques/{$vo.quesId}" target="_blank" >
+                                            {$vo.quesName}
+                                        </a></h2>
+                                            <div class="expandable entry-body">
+                                                <link itemprop="url" href="">
+                                                <div class="zm-item-vote">
+                                                    <a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-bind-votecount="">{$vo.praiseNumb}</a>
+                                                </div>
+                                                <div class="zm-votebar">
+                                                    <button class="up" aria-pressed="false" title="赞同"@click="praise('',$event)" >
+                                                        <i class="icon vote-arrow"></i>
+                                                        <span class="count">{$vo.praiseNumb}</span>
+                                                        <span class="label sr-only">赞同</span>
+                                                    </button>
+                                                    <button class="down" aria-pressed="false" title="反对，不会显示你的姓名" @click="against('',$event)" >
+                                                        <i class="icon vote-arrow"></i>
+                                                        <span class="label sr-only">反对，不会显示你的姓名</span>
+                                                    </button>
+                                                </div>
+                                                <div class="zm-item-answer-author-info">
+                                                    <span class="summary-wrapper">
+                                                    <span class="author-link-line">
+                                                        <a class="author-link" target="_blank" href="">nichen</a>
+                                                    </span>
+                                                    <span title="yijuhua" class="bio">
+                                                        yijuhua
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <div class="zm-item-vote-info">
+                                                    <span class="voters text"><a href="#" class="more text"><span class="js-voteCount">{$vo.praiseNumb} </span>&nbsp;人赞同</a>
+                                                    </span>
+                                                </div>
+                                                <div class="zm-item-rich-text expandable js-collapse-body">
+                                                    <textarea hidden="" class="content">
+                                                        {$vo.answerContent}
+                                                    </textarea>
+                                                    <div class="zh-summary summary clearfix">
+                                                        <!-- <img src="" class="origin_image inline-img zh-lightbox-thumb" > -->
+                                                        {$vo.answerContent|subtext=120}
+                                                        <a href="#"  @click="showall('',$event)" class="toggle-expand">显示全部</a>
+                                                    </div>
+                                                    <p class="visible-expanded"><a class="answer-date-link meta-item"  href="#">编辑于 {$vo.createTime}</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="zm-item-meta feed-meta">
+                                                <div class="zm-item-meta answer-actions clearfix js-contentActions">
+                                                    <div class="zm-meta-panel" is-con='0'>
+                                                        <a class="follow-link zg-follow meta-item" href="javascript:;"><i class="z-icon-follow"></i>关注问题</a>
+                                                        <a href="#" name="addcomment" class="meta-item toggle-comment js-toggleCommentBox" @click="showcomment('',$event)" data-comnum="{$vo.commentNumb}">
+                                                            <i class="z-icon-comment"></i>{$vo.commentNumb|checkcomment}</a>
+                                                        <a href="#" class="meta-item zu-autohide js-thank" tog data-thanked="false" @click="thank('',$event)" ><i class="z-icon-thank"></i>感谢</a>
+                                                        <a href="#" tog class="meta-item zu-autohide js-share goog-inline-block goog-menu-button" style="user-select: none;">
+                                                            <div class="goog-inline-block goog-menu-button-outer-box">
+                                                                <div class="goog-inline-block goog-menu-button-inner-box">
+                                                                    <div class="goog-inline-block goog-menu-button-caption"><i class="z-icon-share"></i>分享</div>
+                                                                    <div class="goog-inline-block goog-menu-button-dropdown">&nbsp;</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" tog class="meta-item zu-autohide js-collect"><i class="z-icon-collect"></i>收藏</a>
+                                                        <span tog class="zg-bull zu-autohide">•</span>
+                                                        <a  tog href="#" class="meta-item zu-autohide js-noHelp">没有帮助</a>
+                                                        <span tog class="zg-bull zu-autohide">•</span>
+                                                        <a tog href="#" class="meta-item zu-autohide js-report">举报</a>
+                                                        <span tog class="zg-bull">•</span>
+                                                        <a tog href="/terms#sec-licence-1" target="_blank" class="meta-item copyright">
+                                                        作者保留权利
+                                                    </a>
+                                                        <button class="meta-item item-collapse js-collapse" @click = "hideans('',$event)">
+                                                            <i class="z-icon-fold"></i>收起
+                                                        </button>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </volist>
+
+                            
+                        </div>
+                        <a aria-role="button" class="zg-btn-white zu-button-more">更多</a>
+                        <a href="javascript:;" id="zh-load-more" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="display:none">更多</a>
+                    </div>
+                </div>
+                    <!-- 问题列 end-->
+                </div>
+            </div>
+        </div>
+        <!-- 右侧边栏 -->
+        <div class="zu-main-sidebar">
+            <div class="zm-side-section">
+                <div class="zm-side-section-inner">
+                    <div class="topic-header-side zm-entry-head-wrap">
+                        <div class="clearfix">
+                            <div id="zh-topic-side-head">
+                                <a href="javascript:;" name="focus" is_atten="{$isatten}" @click="focus('{$topicdata.topicId}',$event)"  class="zg-mr10 zu-entry-focus-button  {$isatten==1?'zg-btn-white':'zg-btn-green'}" >{$isatten==1?'取消关注':'关注'}</a>
+                                <div class="zm-topic-side-followers-info">
+                                    <a href=""><strong>{$attennumb}</strong></a> 人关注了该话题
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a class="zg-link-litblue-normal js-may-disable" href="/topic/19550517/organize">组织</a>
+                            <span class="zg-bull">•</span>
+                            <a class="zg-link-litblue-normal js-may-disable" href="/topic/19550517/manage">管理</a>
+                            <span class="zg-bull">•</span>
+                            <a class="zg-link-litblue-normal" href="/topic/19550517/log">日志</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zm-side-section">
+                <div class="zm-side-section-inner">
+                    <h3 class="zm-topic-side-organize-title">描述
+                        </h3>
+                    <div id="zh-topic-desc" data-resourceid="99" data-action="/topic-introduction" class="zm-editable-status-normal">
+                        <div class="zm-editable-tip" style="display: none;"><a href="javascript:;" name="edit">添加话题描述</a></div>
+                        <div class="zm-editable-content" data-editable-maxlength="130">{$topicdata.topicDescribe}<a href="javascript:;" class="zu-edit-button" name="edit"><i class="zu-edit-button-icon"></i>修改</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var queslist = {$queslist_g};
+</script>
+</html>

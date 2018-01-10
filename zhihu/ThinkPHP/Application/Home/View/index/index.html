@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>首页 - 知乎</title>
+	<link rel="stylesheet" href="__PUBLIC__/css/main.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/comment.css">
+	<link rel="stylesheet" href="__PUBLIC__/css/alert.css">
+	<script src="__PUBLIC__/js/jquery.js"></script>
+	<script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/qrcode.js"></script>
+    <script src="__PUBLIC__/js/share.js"></script>
+	<script src="__PUBLIC__/js/alert.js"></script>
+	<script src="__PUBLIC__/js/index.js"></script>
+	<script src="__PUBLIC__/js/main.js"></script>
+</head>
+
+<body>
+	<div id="main">
+		<div class="zg-wrap zu-main clearfix " style="top: 50px;">
+			<!-- 左 S-->
+			<div class="zu-main-content">
+				<div class="zu-main-content-inner">
+					
+					<div class="zg-section" id="zh-home-list-title">
+						<i class="zg-icon zg-icon-feedlist"></i> 最新动态
+						<input type="hidden" id="is-topstory">
+						
+					</div>
+					<div class="zu-main-feed-con navigable">
+						<!-- list -->
+						<div id="js-home-feed-list" class="zh-general-list topstory clearfix">
+							<my-list @showalll="showall" v-for="(item, index) in list" v-bind:item="item" v-bind:key="item['id']">
+							</my-list>
+							<a @click="morelist('',$event)" class="zg-btn-white zu-button-more">更多</a>
+                        	
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 右 E -->
+			<!-- 右 S-->
+			<div class="zu-main-sidebar">
+				<!-- <button @click="add()" >testadd</button> -->
+				<div class="zm-side-section">
+					<div class="zm-side-section-inner">
+						<div class="zm-side-nav-group">
+							<div class="zm-side-nav">
+								<li class="zm-side-nav-li">
+										<a class="zm-side-nav-link" href="javascript:;" @click="subnewques" >
+										<i class="sprite-home-question-off" style="display: inline-block;
+										    vertical-align: middle;
+										    margin-right: 2px;" ></i>提问
+										</a>
+										</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 右 E -->
+		</div>
+<div class="modal-dialog-bg" style="display:none;" v-show="showmodel" aria-hidden="true" style="opacity: 0.5;width: 811px;height: 2845px;"></div>
+<div class="modal-wrapper" style="display:none;" v-show="showmodel">
+    <div tabindex="0" role="dialog" aria-labelledby=":2f" class="modal-dialog absolute-position" style="width: 550px;">
+        <div class="modal-dialog-title"><span id=":2f" role="heading" class="modal-dialog-title-text">提问</span><span role="button" tabindex="0" aria-label="Close" @click="hidemodel" class="modal-dialog-title-close"></span></div>
+        <div class="modal-dialog-content">
+            <div class="zh-add-question-form">
+                <form class="js-add-question-form" style="display: block;">
+                    <div class="zg-section-big clearfix">
+                        <div id="zm-modal-dialog-info-wrapper"></div>
+                        <div class="zg-form-text-input add-question-title-form" style="position: relative;">
+                            <textarea v-model="newquesname" title="在这里输入问题" id="zh-question-suggest-title-content"  placeholder="写下你的问题" role="combobox"  autocomplete="off" class="zg-editor-input zu-seamless-input-origin-element" style="height: 22px;"></textarea>
+                        </div> <span id="js-title-length-err-msg" class="title-length-err-msg zg-right" style="display: none;">问题字数太少了吧</span></div>
+                    <div class="zg-section-big">
+                        <div class="zm-modal-dialog-warnmsg-wrapper" style="display: none; position: relative;">
+                            <div class="zm-modal-dialog-warnmsg zm-modal-dialog-guide-warn-message zg-r5px"></div> <a name="close" title="关闭" href="javascript:;" class="zu-global-notify-close" style="display: none;">x</a> <span class="zm-modal-dialog-guide-title-msg"></span></div>
+                        <div class="add-question-section-title"><span class="zg-right extra-editor-toolbar hidden-phone"><div role="button" @click="selectimg" title="添加图片" class="js-editor-add-pic goog-inline-block goog-link-button" style="user-select: none;">
+                        <input type="file"  id="theimg" hidden="hidden" name="subquesimg">
+                        <i class="tr-inline-icon tr-image"></i></div></span> 问题说明（可选）：
+                            <span id="zh-question-form-detail-err"></span></div>
+                        <div id="zh-question-suggest-detail-container" class="zm-editable-status-editing">
+                            <div  class="zm-editable-content" style="display: none;"></div>
+                            <div class="zm-editable-editor-wrap no-toolbar">
+                                <div class="zm-editable-editor-outer">
+                                    <div class="zm-editable-editor-field-wrap">
+                                        <div id="quesdesc"  g_editable="true" role="textbox" contenteditable="true" class="zm-editable-editor-field-element editable">
+                                            <br>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="zm-command"><a name="cancel" href="javascript:;" class="zm-command-cancel">取消</a><a name="save" href="javascript:;" class="zg-r3px zg-btn-blue">保存</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zm-add-question-form-topic-wrap">
+                        <div class="add-question-section-title"><span class="zg-gray zg-right hidden-phone">话题越精准，越容易让相关领域专业人士看到你的问题</span> 选择话题：
+                            <span id="zh-question-form-tag-err"></span></div>
+                        <div id="zh-question-suggest-topic-container" class="zm-tag-editor zg-section">
+                            <div id="zh-question-suggest-autocomplete-container">
+								<ul class="zm-topic-cat-main js-topic-cat-main clearfix" @click="selecttopic('',$event)">
+								    <li data-topicid="5" class="zm-topic-cat-item"><a href="javascript:;">旅行</a></li>
+								    <li data-topicid="1"  class="zm-topic-cat-item"><a href="javascript:;">健身</a></li>
+								    <li data-topicid="3"  class="zm-topic-cat-item"><a href="javascript:;">电影</a></li>
+								    <li data-topicid="9"  class="zm-topic-cat-item"><a href="javascript:;">互联网</a></li>
+								    <li  data-topicid="4"  class="zm-topic-cat-item"><a href="javascript:;">文学</a></li>
+								    <li  data-topicid="7"  class="zm-topic-cat-item"><a href="javascript:;">古典音乐</a></li>
+								    <li  data-topicid="6"  class="zm-topic-cat-item"><a href="javascript:;">美食</a></li>
+								    <li  data-topicid="8"  class="zm-topic-cat-item"><a href="javascript:;">流行音乐</a></li>
+								    <li data-topicid="2"  class="zm-topic-cat-item"><a href="javascript:;">篮球</a></li>
+								    <li  data-topicid="10"  class="zm-topic-cat-item"><a href="javascript:;">编程</a></li>
+								</ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zm-command">
+                        <label class="zm-question-form-hide-in-about-question-el zg-left">
+                            <input type="checkbox" value="1" v-model="checked" class="zg-addq-isanon">匿名
+                        </label> <a href="javascript:;" name="cancel" @click="hidemodel" class="zm-command-cancel">取消</a> 
+                        <a href="javascript:;" @click="sub" name="addq" class="zg-r5px zu-question-form-add zg-btn-blue">发布</a> 
+                        <a name="jumpq" class="zg-r5px zg-btn-blue zu-question-form-jump" style="display: none;">查看问题</a></div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-dialog-buttons" style="display: none;"></div>
+    </div>
+</div>
+
+	</div><!-- main -->
+</body>
+<script type="text/javascript">
+var DATA = {$arr};
+</script>
+
+<style type="text/css">
+	.zm-side-nav-link:hover {
+    color: #259;
+    background: #eff6fa;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.modal-wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+     display: -webkit-box; 
+     display: flex; 
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+.modal-dialog {
+    position: static;
+    margin-top: 14%;
+    margin-top: 14vh;
+}
+</style>
+</html>

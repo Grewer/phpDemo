@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{$key}-搜索结果</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/main.js"></script>
+    <script src="__PUBLIC__/js/search.js"></script>
+
+</head>
+
+<body class="zhi page-search">
+    <div class="zg-wrap zu-main clearfix" role="main">
+        <div class="zu-main-content">
+            <div class="zu-main-content-inner" style="margin:0">
+                <div class="search-tabs">
+                    <ul class="tab-navs">
+                        <li class="tab-nav active"><a href="/index.php/Index/search?type=question&amp;q={$key}">提问</a></li>
+                        <li class="tab-nav"><a href="/index.php/Index/search?type=answer&amp;q={$key}">回答</a></li>
+                    </ul>
+                </div>
+                <ul class="list contents navigable" >
+                    
+                            <component v-bind:is="type" v-for="(item, index) in list" v-bind:item="item">
+                            </component>
+                            
+    </ul></div>
+    </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+	var list = {$list};
+	var type = '{$type}';
+</script>
+<style type="text/css">
+	.ContentItem-title em{
+    font-style: normal;
+    color: #c20a0a;
+}
+	.List-item{
+		position: relative;
+    padding: 20px 24px;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f2f7;
+	}.ContentItem-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1e1e1e;
+}
+
+</style>
+</html>

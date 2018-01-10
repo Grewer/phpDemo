@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>话题动态 - 知乎</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/main.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/alert.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/comment.css">
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/js/main.js"></script>
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/alert.js"></script>
+    <script src="__PUBLIC__/js/topic_loading.js"></script>
+</head>
+
+<body class="zhi js-topic-feed-page topic-feed-page">
+    <div id="main" class="zg-wrap zu-main clearfix" data-tid="{$first.topicId}">
+        <div class="zu-main-content">
+            <div class="zu-main-content-inner">
+                <div class="topic-feed-title">
+                    <i class="zg-icon zg-icon-feedlist"></i>
+                    <span>已关注的话题动态</span>
+                    
+                </div>
+                <ul class="zm-topic-cat-main js-topic-cat-main clearfix" ref="attentopiclist">
+                    <foreach name="attentopic" item="vo">
+                        <li class="zm-topic-cat-item" data-topicid="{$vo.topicId}"><a @click="load({$vo.topicId},$event)" href="/index.php/Topic/sometopic/topicid/{$vo.topicId}">{$vo.topicName}</a></li>
+                    </foreach>
+                </ul>
+                <div class="topic-title clearfix js-topic-title" style="display: block;" ref="topictext">
+                    <a href="/index.php/Topic/topic/id/{$first.topicId}" target="_blank" class="zg-left js-topic-title-avatar">
+                        <img class="Avatar Avatar--m js-topic-avatar" src="{$first.photo}">
+                    </a>
+                    <a href="/index.php/Topic/topic/id/{$first.topicId}" target="_blank" class="zg-left topic-title-name">{$first.topicName}</a>
+                    <div class="feed-switcher js-feed-switcher">
+                        <a href="javascript:;" class="current" data-feed-type="smart_feed">热门排序</a> | <a href="javascript:;" data-feed-type="timeline_feed">时间排序</a>
+                    </div>
+                </div>
+                <!-- queslist -->
+                <div class="zm-topic-list-container">
+                    <div class="zu-top-feed-list" id="zh-topic-feed-list">
+                        <div class="zh-general-list clearfix" style="display: block;" ref="ques_user">
+                            <volist name="queslist" id="vo" >
+                                <div class="feed-item feed-item-hook folding" user-id="{$vo.userId}" answer-id="{$vo.id}" is-tog="1" @mouseenter="show('',$event)" @mouseleave="hide('',$event)" ques-id="{$vo.quesId}" >
+                                    <div class="feed-main"  >
+                                        <div class="feed-content">
+                                            <h2><a class="question_link" href="/index.php/Ques/{$vo.quesId}" target="_blank" >
+                                            {$vo.quesName}
+                                        </a></h2>
+                                            <div class="expandable entry-body">
+                                                <link itemprop="url" href="">
+                                                <div class="zm-item-vote">
+                                                    <a class="zm-item-vote-count js-expand js-vote-count" href="javascript:;" data-bind-votecount="">{$vo.praiseNumb}</a>
+                                                </div>
+                                                <div class="zm-votebar">
+                                                    <button class="up" aria-pressed="false" title="赞同"@click="praise('',$event)" >
+                                                        <i class="icon vote-arrow"></i>
+                                                        <span class="count">{$vo.praiseNumb}</span>
+                                                        <span class="label sr-only">赞同</span>
+                                                    </button>
+                                                    <button class="down" aria-pressed="false" title="反对，不会显示你的姓名" @click="against('',$event)" >
+                                                        <i class="icon vote-arrow"></i>
+                                                        <span class="label sr-only">反对，不会显示你的姓名</span>
+                                                    </button>
+                                                </div>
+                                                <div class="zm-item-answer-author-info">
+                                                    <span class="summary-wrapper">
+                                                    <span class="author-link-line">
+                                                        <a class="author-link" target="_blank" href="">nichen</a>
+                                                    </span>
+                                                    <span title="yijuhua" class="bio">
+                                                        yijuhua
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <div class="zm-item-vote-info">
+                                                    <span class="voters text"><a href="#" class="more text"><span class="js-voteCount">{$vo.praiseNumb} </span>&nbsp;人赞同</a>
+                                                    </span>
+                                                </div>
+                                                <div class="zm-item-rich-text expandable js-collapse-body">
+                                                    <textarea hidden="" class="content">
+                                                        {$vo.answerContent}
+                                                    </textarea>
+                                                    <div class="zh-summary summary clearfix">
+                                                        <!-- <img src="" class="origin_image inline-img zh-lightbox-thumb" > -->
+                                                        {$vo.answerContent|subtext=120}
+                                                        <a href="#"  @click="showall('',$event)" class="toggle-expand">显示全部</a>
+                                                    </div>
+                                                    <p class="visible-expanded"><a class="answer-date-link meta-item"  href="#">编辑于 {$vo.createTime}</a></p>
+                                                </div>
+                                            </div>
+                                            <div class="zm-item-meta feed-meta">
+                                                <div class="zm-item-meta answer-actions clearfix js-contentActions">
+                                                    <div class="zm-meta-panel" is-con='0'>
+                                                        <a @click="attenques('',$event)" class="follow-link zg-follow meta-item" href="javascript:;"><i class="z-icon-follow"></i>关注问题</a>
+                                                        <a href="#" name="addcomment" class="meta-item toggle-comment js-toggleCommentBox" @click="showcomment('',$event)" data-comnum="{$vo.commentNumb}">
+                                                            <i class="z-icon-comment"></i>{$vo.commentNumb|checkcomment}</a>
+                                                        <a href="#" class="meta-item zu-autohide js-thank" tog data-thanked="false" @click="thank('',$event)" ><i class="z-icon-thank"></i>感谢</a>
+                                                        <a href="#" tog class="meta-item zu-autohide js-share goog-inline-block goog-menu-button" style="user-select: none;">
+                                                            <div class="goog-inline-block goog-menu-button-outer-box">
+                                                                <div class="goog-inline-block goog-menu-button-inner-box">
+                                                                    <div class="goog-inline-block goog-menu-button-caption"><i class="z-icon-share"></i>分享</div>
+                                                                    <div class="goog-inline-block goog-menu-button-dropdown">&nbsp;</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" tog class="meta-item zu-autohide js-collect"><i class="z-icon-collect"></i>收藏</a>
+                                                        <span tog class="zg-bull zu-autohide">•</span>
+                                                        <a  tog href="#" class="meta-item zu-autohide js-noHelp">没有帮助</a>
+                                                        <span tog class="zg-bull zu-autohide">•</span>
+                                                        <a tog href="#" class="meta-item zu-autohide js-report">举报</a>
+                                                        <span tog class="zg-bull">•</span>
+                                                        <a tog href="/terms#sec-licence-1" target="_blank" class="meta-item copyright">
+                                                        作者保留权利
+                                                    </a>
+                                                        <button class="meta-item item-collapse js-collapse" @click = "hideans('',$event)">
+                                                            <i class="z-icon-fold"></i>收起
+                                                        </button>
+                                                    </div>
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </volist>
+                        </div>
+                        <a aria-role="button" class="zg-btn-white zu-button-more">更多</a>
+                        <a href="javascript:;" id="zh-load-more" data-method="next" class="zg-btn-white zg-r3px zu-button-more" style="display:none">更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右侧边框 -->
+        <div class="zu-main-sidebar">
+            <div class="topics-plaza">
+                <a target="_blank" href="{:U('/index.php/Topics/index')}" class="zg-btn-blue">
+                        进入话题广场
+                    </a>
+                <a target="_blank" href="{:U('/index.php/Topics/index')}" class="text">
+                        来这里发现更多有趣话题
+                    </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var queslist={$queslist_g};
+</script>
+</html>

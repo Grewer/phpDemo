@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{$quesdata.quesName}</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/people.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/editpic.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/newmain.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/comment.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/alert.css">
+    <style type="text/css">
+        .zg-btn-blue{
+            background: #0f88eb;
+            color: #fff;
+            right: 24px;
+            bottom: 12px;
+            margin-bottom: 2px;
+            margin-left: 16px;
+                    border: 1px solid #0f88eb;display: inline-block;
+            padding: 0 16px;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="__PUBLIC__/js/alert.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/ques.js"></script>
+</head>
+
+<body class="Entry-body Body--isAppleDevice">
+    <div id="root" style="top: -13px;position: relative;" data-quesid="{$quesdata.id}">
+        <div>
+            <main class="App-main" data-id="{$data.id}" data-name="{$data.nickName}" data-img="{$data.photo}" data-auto="{$data.autograph}" >
+                <div>
+                    <div class="QuestionHeader">
+                        <div class="QuestionHeader-content" style="height:auto!important">
+                            <div class="QuestionHeader-main">
+                                <div class="QuestionHeader-topics">
+                                    <div class="Tag QuestionTopic"><span class="Tag-content"><a class="TopicLink" href="/index.php/Topic/topic/id/{$topicdata.id}"><div class="Popover"><div id="Popover-83265-24453-toggle">{$topicdata.topicName}</div></div></a></span></div>
+                                </div>
+                                <h1 class="QuestionHeader-title">{$quesdata.quesName}</h1>
+                                <div class="QuestionHeader-detail">
+                                    <div class="QuestionRichText QuestionRichText--collapsed">
+                                        <div>
+                                            <span class="RichText">
+                                            <img  style="display: none" v-show="isshowquesimg('{$quesdata.photo}')" src="{$quesdata.photo}" data-rawwidth="912"  class="origin_image zh-lightbox-thumb" width="912" >{$quesdata.quesDescribe}
+                                            </span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="QuestionHeader-side">
+                                <div class="QuestionHeader-follow-status">
+                                    <div class="QuestionFollowStatus">
+                                        <div class="NumberBoard QuestionFollowStatus-counts">
+                                            <button class="Button NumberBoard-item Button--plain" type="button">
+                                                <div class="NumberBoard-name">关注者</div>
+                                                <div class="NumberBoard-value">{$quesdata.attentionNumb}</div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="QuestionHeader-footer" style="height: 34px;">
+                            <div class="QuestionHeader-footer-inner">
+                                <div class="QuestionHeader-main QuestionHeader-footer-main">
+                                    <div class="QuestionHeader-actions">
+                                        <button class="Button Button--plain" type="button" @click = "showquescom('',$event)">
+                                            <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--comment Icon--left" width="12" height="16" aria-hidden="true" style="height: 16px; width: 12px;">
+                                                <title></title>
+                                                <g>
+                                                    <path d="M7.24 16.313c-.272-.047-.553.026-.77.2-1.106.813-2.406 1.324-3.77 1.482-.16.017-.313-.06-.394-.197-.082-.136-.077-.308.012-.44.528-.656.906-1.42 1.11-2.237.04-.222-.046-.45-.226-.588C1.212 13.052.027 10.73 0 8.25 0 3.7 4.03 0 9 0s9 3.7 9 8.25-4.373 9.108-10.76 8.063z"></path>
+                                                </g>
+                                            </svg>
+                                           {{quescomnumb|changequescomnumb}}
+                                        </button>
+                                        <button class="Button Button--plain" type="button">
+                                            <svg viewBox="0 0 18 20" class="Icon Icon--report Icon--left" width="11" height="16" aria-hidden="true" style="height: 16px; width: 11px;">
+                                                <title></title>
+                                                <g>
+                                                    <path d="M16.947 1.13c-.633.135-3.927.638-5.697.384-3.133-.45-4.776-2.54-9.95-.888C.305 1.04.025 1.664.025 2.646L0 18.807c0 .3.1.54.304.718.195.202.438.304.73.304.275 0 .52-.102.73-.304.202-.18.304-.418.304-.718v-6.58c4.533-1.235 8.047.668 8.562.864 2.343.893 5.542.008 6.774-.657.397-.178.596-.474.596-.887V1.964c0-.6-.42-.972-1.053-.835z"></path>
+                                                </g>
+                                            </svg>
+                                            举报
+                                        </button>
+                                        <div class="Popover">
+                                            <button class="Button Button--plain" type="button" id="Popover-83276-83851-toggle" aria-haspopup="true" aria-expanded="false" aria-owns="Popover-83276-83851-content">
+                                                <svg viewBox="0 0 18 4" class="Icon Icon--dots" width="14" height="16" aria-hidden="true" style="height: 16px; width: 14px;">
+                                                    <title></title>
+                                                    <g>
+                                                        <g>
+                                                            <circle cx="2" cy="2" r="2"></circle>
+                                                            <circle cx="9" cy="2" r="2"></circle>
+                                                            <circle cx="16" cy="2" r="2"></circle>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="QuestionHeader-actions"></div>
+                                </div>
+                                <div class="QuestionHeader-side">
+                                    <div class="QuestionButtonGroup">
+                                        <button v-if="isattenques" class="Button Button--primary Button--grey" type="button" @click="cancelquesatten()">正在关注</button>
+                                        <button class="Button Button--primary Button--blue" v-else type="button" @click="attenques()">关注问题</button>
+                                        <button class="Button" type="button" @click="scrolltoans">
+                                            <svg viewBox="0 0 12 12" class="Icon Button-icon Icon--modify" width="14" height="16" aria-hidden="true" style="height: 16px; width: 14px;">
+                                                <title></title>
+                                                <g>
+                                                    <path d="M.423 10.32L0 12l1.667-.474 1.55-.44-2.4-2.33-.394 1.564zM10.153.233c-.327-.318-.85-.31-1.17.018l-.793.817 2.49 2.414.792-.814c.318-.328.312-.852-.017-1.17l-1.3-1.263zM3.84 10.536L1.35 8.122l6.265-6.46 2.49 2.414-6.265 6.46z" fill-rule="evenodd"></path>
+                                                </g>
+                                            </svg>
+                                            写回答
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 回答 -->
+                    <div class="Question-main">
+                        <div class="Question-mainColumn">
+                            <div>
+                                <div class="Card">
+                                    <div class="List">
+                                        <div class="List-header">
+                                            <h4 class="List-headerText"><span>{$quesdata.answerNumb}个回答
+                                                    <div class="List-headerOptions">
+                                                        <div class="Popover">
+
+                                                            <title></title>
+                                                            <g>
+                                                                <path d="M4 11.183L1.284 8.218c-.293-.29-.77-.29-1.064 0-.293.29-.293.76 0 1.052l3.25 3.512c.292.29.768.29 1.062 0L7.78 9.27c.293-.29.293-.76 0-1.052-.295-.29-.77-.29-1.064 0L4 11.182zM4 1.818L1.284 4.782c-.293.29-.77.29-1.064 0-.293-.29-.293-.76 0-1.052L3.47.218c.292-.29.768-.29 1.062 0L7.78 3.73c.293.29.293.76 0 1.052-.295.29-.77.29-1.064 0L4 1.82z"></path>
+                                                            </g>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <my-anslist    v-for="(item, index) in list" v-bind:item="item" v-bind:key="item['id']">
+                                                <svg slot="praisebutton" viewBox="0 0 20 18" class="Icon VoteButton-upIcon Icon--triangle" width="9" height="16" aria-hidden="true" style="height: 16px; width: 9px;"><title></title><g><path d="M0 15.243c0-.326.088-.533.236-.896l7.98-13.204C8.57.57 9.086 0 10 0s1.43.57 1.784 1.143l7.98 13.204c.15.363.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H1.955c-1.08 0-1.955-.517-1.955-1.9z"></path></g></svg>
+
+                                                <svg slot="againstbutton"  viewBox="0 0 20 18" class="Icon VoteButton-downIcon Icon--triangle" width="9" height="16" aria-hidden="true" style="height: 16px; width: 9px;"><title></title>
+                                                    <g><path d="M0 15.243c0-.326.088-.533.236-.896l7.98-13.204C8.57.57 9.086 0 10 0s1.43.57 1.784 1.143l7.98 13.204c.15.363.236.57.236.896 0 1.386-.875 1.9-1.955 1.9H1.955c-1.08 0-1.955-.517-1.955-1.9z"></path></g>
+                                                    </svg>
+
+                                                    <svg slot="addcom"  viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--comment Icon--left" width="12" height="16" aria-hidden="true" style="height: 16px; width: 12px;">
+                                                        <title></title>
+                                                        <g>
+                                                            <path d="M7.24 16.313c-.272-.047-.553.026-.77.2-1.106.813-2.406 1.324-3.77 1.482-.16.017-.313-.06-.394-.197-.082-.136-.077-.308.012-.44.528-.656.906-1.42 1.11-2.237.04-.222-.046-.45-.226-.588C1.212 13.052.027 10.73 0 8.25 0 3.7 4.03 0 9 0s9 3.7 9 8.25-4.373 9.108-10.76 8.063z"></path>
+                                                        </g>
+                                                    </svg>
+
+                                                   
+
+                                                        <svg slot="thank"  width="14" height="16" viewBox="0 0 20 18" xmlns="http://www.w3.org/2000/svg" class="Icon Icon--thank Icon--left"  style="height: 16px; width: 14px;">
+                                                                <title></title>
+                                                                <g>
+                                                                    <path d="M0 5.437C0 2.505 2.294.094 5.207 0 7.243 0 9.092 1.19 10 3c.823-1.758 2.65-3 4.65-3C17.546 0 20 2.507 20 5.432 20 13.24 11.842 18 10 18 8.158 18 0 13.24 0 5.437z"></path>
+                                                                </g>
+                                                            </svg>
+
+
+                                            </my-anslist>
+                                            
+
+                                        <!-- list -->
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- 添加回答 -->
+                            <div class="Card QuestionAnswers-answerAdd" v-if="check_hasans(hasans)">
+                            <div class="AnswerAdd"><div class="AnswerAdd-header">
+
+                            <div class="AuthorInfo AnswerAdd-info"  v-show="editanony(isanony)"><span class="UserLink AuthorInfo-avatarWrapper"><img width="38" height="38" src="{$data.photo}"></span><div class="AuthorInfo-content"><div class="AuthorInfo-title"><div class="AuthorInfo-name"><span class="UserLink">{$data.nickName}</span></div></div><div class="AuthorInfo-badge"><span class="RichText AnswerAdd-bio">{$data.autograph}</span></div></div>
+                            </div>
+
+                            <div class="AuthorInfo AnswerAdd-info" v-show="editanony_is(isanony)"><span class="UserLink AuthorInfo-avatarWrapper"><img class="Avatar AuthorInfo-avatar" width="38" height="38" src="/Public/img/head/anonymous.jpg"  alt="匿名用户"></span><div class="AuthorInfo-content"><div class="AuthorInfo-title"><div class="AuthorInfo-name"><span class="UserLink">匿名用户</span></div></div></div></div>
+
+                            <button type="button" class="Button AnswerAdd-toggleAnonymous Button--plain" @click="toggleanony">使用匿名身份回答</button></div><form  class="AnswerForm"><div class="AnswerForm-editor Input-wrapper Input-wrapper--spread Input-wrapper--large Input-wrapper--noPadding"><div class="Input Editable"><div><div class="Sticky"><div class="Editable-toolbar"><div class="Editable-controls"><button @click="subimg('',$event)" aria-label="上传图片" title="上传图片" type="button" class="Button Editable-control Button--plain"><svg viewBox="0 0 20 16" width="16" height="14" aria-hidden="true" class="Icon Icon--camera" style="height: 14px; width: 16px;"><title></title><g><path d="M18.094 2H15s-1-2-2-2H7C6 0 5 2 5 2H2C0 2 0 3.967 0 3.967V14c0 2 2.036 2 2.036 2H17c3 0 3-1.983 3-1.983V4c0-2-1.906-2-1.906-2zM10 12c-1.933 0-3.5-1.567-3.5-3.5S8.067 5 10 5s3.5 1.567 3.5 3.5S11.933 12 10 12zm0 1.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm7.5-8c-.552 0-1-.448-1-1s.448-1 1-1 1 .448 1 1-.448 1-1 1z" fill-rule="evenodd"></path></g></svg></button>
+                            <span id="changeimg"></span>
+                            </div></div></div></div><div class="Dropzone RichText" style="min-height: 118px;"><div class="DraftEditor-root"><div class="public-DraftEditorPlaceholder-root"><div id="placeholder-8vrrn" class="public-DraftEditorPlaceholder-inner">写回答...</div></div><div class="DraftEditor-editorContainer">
+                            <div aria-describedby="placeholder-8vrrn" contenteditable="true" role="textbox" spellcheck="true" tabindex="0" id="myanswer" class="public-DraftEditor-content"  @focus="foanswer()" @blur="blanswer()" style="outline: none; white-space: pre-wrap; word-wrap: break-word;">
+                            <div >
+                            <div  class="Editable-unstyled">
+                            <div  class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr">
+                            <span>
+                            <br>
+                            </span>
+                            </div></div></div></div></div></div></div><input id="ans-img-sub" type="file" multiple="multiple" accept="image/jpg,image/jpeg,image/png" style="display: none;"></div></div><div><div class="Sticky AnswerForm-footer is-bottom"><div class="AnswerForm-status"></div><div class="AnswerForm-footerRight"><div class="Popover"></div><button type="button" class="Button AnswerForm-submit Button--primary Button--blue" @click="submyanswer()">提交回答</button></div></div></div></form></div></div>
+                            <div class="Card AnswerAdd" v-else ><div class="QuestionAnswers-hasAnswer">一个问题你只能回答一次,但是你可以进行<a @click="movetoans">修改</a></div></div>
+                        </div>
+                        <!-- addanswer -->
+
+                    </div>
+                     <div class="Question-sideColumn">
+                            <div>
+                                <div class="Card" ><div class="Card-header SimilarQuestions-title"><div class="Card-headerText">相关问题</div></div><div class="Card-section SimilarQuestions-list"><div class="SimilarQuestions-item" data-za-module="QuestionItem" ><a class="Button Button--plain" target="_blank" type="button" href="/index.php/Ques/1">坚持跑步到底有什么改变？</a>2个回答</div><div class="SimilarQuestions-item" ><a class="Button Button--plain" target="_blank" type="button" href="/index.php/Ques/2">是什么支撑你跑完五公里？</a>2个回答 </div><div class="SimilarQuestions-item" ><a class="Button Button--plain" target="_blank" type="button" href="/index.php/Ques/3">2016-2017 赛季 NBA 常规赛 MVP 到底应该给谁？</a>10个回答</div><div class="SimilarQuestions-item" ><a class="Button Button--plain" target="_blank" type="button" href="/index.php/Ques/4">篮球如何提高球性，练好运球？</a>4个回答</div><div class="SimilarQuestions-item" ><a class="Button Button--plain" target="_blank" type="button" href="/index.php/Ques/5">你听过最能引起共鸣的话是什么？</a>21个回答</div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+    </main>
+    <div style="display: none;" id="quescom" >
+    <div ><span><div class="Modal-wrapper"><div class="Modal-backdrop"></div><div tabindex="0" class="Modal Modal--fullPage"><div class="Modal-inner"><div class="Modal-content Modal-content--spread"><div class="Comments-container"><div class="Comments Comments--withEditor"><div class="CommentTopbar"><div class="CommentTopbar-meta"><h2 class="CommentTopbar-title">{{quescomnumb| changequescomnumb}}</h2></div></div>
+    <div class="CommentList"> 
+    <!-- 问题评论 -->
+    <my-quescom v-for="(item, index) in queslist" v-bind:item="item" ></my-quescom>
+
+<div></div>
+</div>
+<div class="Comments-footer CommentEditor--normal">
+    <input id="quescomment" @focus="fo('',$event)" v-model="quescom"  gre-focus="" required="写下你的评论" value="" placeholder="写下你的评论…" class="_InputBox_root_1Xwi _InputBox_empty_3_ur _InputBox_blur_3JWV">
+    <button disabled="disabled" @click="quescomsub" type="button" class="Button CommentEditor-singleButton Button--primary Button--blue" id="quescomsub">评论</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="Modal-snackbar Modal-snackbar--collapsed"></div>
+<button @click="hidequescom" aria-label="关闭" type="button" class="Button Modal-closeButton Button--plain">
+    <svg viewBox="0 0 14 14" width="16" height="16" aria-hidden="true" class="Icon Modal-closeIcon Icon--remove" style="height: 16px; width: 16px;">
+        <title></title>
+        <g>
+            <path d="M8.486 7l5.208-5.207c.408-.408.405-1.072-.006-1.483-.413-.413-1.074-.413-1.482-.005L7 5.515 1.793.304C1.385-.103.72-.1.31.31-.103.724-.103 1.385.305 1.793L5.515 7l-5.21 5.207c-.407.408-.404 1.072.007 1.483.413.413 1.074.413 1.482.005L7 8.485l5.207 5.21c.408.407 1.072.404 1.483-.007.413-.413.413-1.074.005-1.482L8.485 7z"></path>
+        </g>
+    </svg>
+</button>
+</div>
+</div>
+</span>
+</div>
+</div>
+
+
+</div>
+</div>
+</body>
+<script type="text/javascript">
+    var isattenques = {$isattenques};
+    var DATA = {$ansdata};
+    var quescomnumb = {$quescomnum};
+    var hasans = {$hasans};
+</script>
+
+</html>
